@@ -1,5 +1,9 @@
 body {
   font-family: Gill Sans, sans-serif;
-  background-color: royalblue;
+  background-color: rgb(90, 128, 231);
   text-align: center;
+}
+
+li {
+  list-style-type: none;
 }
