@@ -2,6 +2,7 @@
 let numRows = 0;
 let numCols = 0;
 let colorSelected;
+let randomColor;
 
 // Add a row
 function addR() {
@@ -122,6 +123,25 @@ function clearAll() {
         for(let i=0; i<numCols; i++){
             col[i].style.background = "";
         }
+    }
+}
+
+function setRandomColor() {
+    randomColor = "#" + (Math.floor(Math.random() * 16777215).toString(16));
+    console.log(randomColor);    
+}
+
+
+
+// Random Fill all cells
+function randomFill() {
+    
+    let col = document.querySelectorAll("td");
+
+    // Change the color of the cells to the selected color
+    for (let i = 0; i < numRows * numCols; i++) {
+        setRandomColor();
+        col[i].style.backgroundColor = randomColor;
     }
 }
 
